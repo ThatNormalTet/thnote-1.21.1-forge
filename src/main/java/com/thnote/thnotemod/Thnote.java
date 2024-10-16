@@ -1,6 +1,10 @@
 package com.thnote.thnotemod;
 
 import com.mojang.logging.LogUtils;
+import com.thnote.thnotemod.block.ModBlocks;
+import com.thnote.thnotemod.item.ModCreativeModeTabs;
+import com.thnote.thnotemod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -28,6 +32,11 @@ public class Thnote
         MinecraftForge.EVENT_BUS.register(this);
 
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
+
+
 
         modEventBus.addListener(this::addCreative);
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -38,7 +47,10 @@ public class Thnote
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.RUBY);
+            event.accept(ModItems.POTATO_RUBY);
+        }
     }
 
     @SubscribeEvent
