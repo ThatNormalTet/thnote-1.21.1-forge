@@ -1,6 +1,6 @@
-// 1.21.1	2024-10-16T23:43:01.2373256	Loot Tables
-dc25502709fdc924a20f359a85eeb8ed40cd9e8b data/thnote/loot_table/blocks/condensed_emerald_block.json
-76af96f86683149f4bed4c2b92b0d0deba89a7a4 data/thnote/loot_table/blocks/potato_ruby_block.json
-61215115ecef4f28612845965b40c7ab7f4527df data/thnote/loot_table/blocks/potato_ruby_ore.json
-7626f8134339b0466dec7a4c6553430a7ec1cdff data/thnote/loot_table/blocks/ruby_block.json
-a9278e97762982b27a96363f2d7477c32aa180ee data/thnote/loot_table/blocks/ruby_ore.json
+// 1.21.1	2024-10-17T09:26:51.3600328	Loot Tables
+11a0234b1a06bff55dba6d41eb1a92d1e1c35d17 data/thnote/loot_table/blocks/condensed_emerald_block.json
+4128034db93cefb1a68f4bebaa3880c6865794e7 data/thnote/loot_table/blocks/potato_ruby_block.json
+c0a36ee991273ed46c5852d2be36f5506ffe27bd data/thnote/loot_table/blocks/potato_ruby_ore.json
+708433d875a19f268f493995e87d88d1a3d970c0 data/thnote/loot_table/blocks/ruby_block.json
+e252a091055ef6d9e26045bc9333984314ab74a9 data/thnote/loot_table/blocks/ruby_ore.json

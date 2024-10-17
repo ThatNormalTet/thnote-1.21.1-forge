@@ -22,7 +22,7 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModBlocks.RUBY_BLOCK.get());
                 pOutput.accept(ModBlocks.RUBY_ORE.get());
                 pOutput.accept(ModBlocks.POTATO_RUBY_ORE.get());
-
+                pOutput.accept(ModItems.MAGIC_WAND.get());
             })
             .build());
 

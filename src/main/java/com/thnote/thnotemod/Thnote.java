@@ -2,6 +2,8 @@ package com.thnote.thnotemod;
 
 import com.mojang.logging.LogUtils;
 import com.thnote.thnotemod.block.ModBlocks;
+import com.thnote.thnotemod.fluid.ModFluidTypes;
+import com.thnote.thnotemod.fluid.ModFluids;
 import com.thnote.thnotemod.item.ModCreativeModeTabs;
 import com.thnote.thnotemod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -31,7 +33,8 @@ public class Thnote
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
-
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);

@@ -16,5 +16,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.RUBY.get());
         basicItem(ModItems.POTATO_RUBY.get());
-    }
+        basicItem(ModItems.MAGIC_WAND.get());
+
+        basicItem(ModItems.POTATO_WATER_BUCKET.get());}
 }
