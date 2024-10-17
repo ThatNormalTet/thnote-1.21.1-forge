@@ -18,7 +18,7 @@ public class ModItems{
 
     public static final RegistryObject<Item> POTATO_RUBY = ITEMS.register("potato_ruby", () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> MAGIC_WAND = ITEMS.register("magic_wand", () -> new MagicWand(new Item.Properties()));
+    public static final RegistryObject<Item> MAGIC_WAND = ITEMS.register("magic_wand", () -> new MagicWand(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<BucketItem> POTATO_WATER_BUCKET = ITEMS.register("potato_water_bucket", () -> new BucketItem(ModFluids.SOURCE_POTATO_WATER,
             new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
