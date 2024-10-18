@@ -1,21 +1,32 @@
 {
+  "Item": "------------------Items------------------",
   "item.thnote.ruby": "Ruby",
   "item.thnote.condensed_ruby": "Condensed Ruby",
   "item.thnote.potato_ruby": "Potato Ruby",
 
-  "item.thnote.potato_water_bucket": "Potato Water Bucket",
-
+  "Custom Item": "------------------Custom Items------------------",
   "item.thnote.magic_wand": "Magic Wand",
 
+  "Buckets": "------------------Buckets------------------",
+  "item.thnote.potato_water_bucket": "Potato Water Bucket",
+
+  "Blocks": "------------------Blocks------------------",
   "block.thnote.ruby_block": "Ruby Block",
   "block.thnote.potato_ruby_block": "Potato Ruby Block",
   "block.thnote.ruby_ore": "Ruby Ore",
   "block.thnote.deepslate_ruby_ore": "Deepslate Ruby Ore",
   "block.thnote.potato_ruby_ore": "Potato Ruby Ore",
   "block.thnote.deepslate_potato_ruby_ore": "Deepslate Potato Ruby Ore",
-
   "block.thnote.condensed_emerald_block": "Condensed Emerald Block",
 
+  "Custom Blocks": "------------------Custom Blocks------------------",
+  "block.thnote.flint_block": "Flint Block",
+
+  "Machines": "------------------Machines------------------",
+
+  "Creative Tabs": "------------------Creative Tabs------------------",
   "creative_tab.thnote.thnote_tab": "ThNoTe",
-  "creative_tab.thnote.thnote_machines_tab": "ThNoTe Machines"
+  "creative_tab.thnote.thnote_machines_tab": "ThNoTe Machines",
+
+  "Text": "------------------TEXTS------------------"
 }

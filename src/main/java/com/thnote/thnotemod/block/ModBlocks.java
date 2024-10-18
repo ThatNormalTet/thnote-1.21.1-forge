@@ -22,12 +22,10 @@ public class ModBlocks {
 //    Register Blocks
 
     public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> POTATO_RUBY_BLOCK = registerBlock("potato_ruby_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
 //    Register Ores
 
@@ -41,7 +39,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> POTATO_RUBY_ORE = registerBlock("potato_ruby_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
-            .strength(4f).requiresCorrectToolForDrops()));
+                    .strength(4f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_POTATO_RUBY_ORE = registerBlock("deepslate_potato_ruby_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
@@ -49,9 +47,11 @@ public class ModBlocks {
 
 //    Register Machines / Interactive Blocks
 
+    public static final RegistryObject<Block> FLINT_BLOCK = registerBlock("flint_block",
+            () -> new Powderizer(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+
     public static final RegistryObject<Block> CONDENSED_EMERALD_BLOCK = registerBlock("condensed_emerald_block",
-            () -> new Powderizer(BlockBehaviour.Properties.of()
-            .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.EMERALD_BLOCK)));
 
 //    Register FluidBlocks
 

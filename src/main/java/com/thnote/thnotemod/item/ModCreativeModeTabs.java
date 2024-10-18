@@ -20,10 +20,12 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModItems.RUBY.get());
                 pOutput.accept(ModItems.POTATO_RUBY.get());
                 pOutput.accept(ModBlocks.RUBY_BLOCK.get());
+                pOutput.accept(ModBlocks.POTATO_RUBY_BLOCK.get());
                 pOutput.accept(ModBlocks.RUBY_ORE.get());
                 pOutput.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());
                 pOutput.accept(ModBlocks.POTATO_RUBY_ORE.get());
                 pOutput.accept(ModBlocks.DEEPSLATE_POTATO_RUBY_ORE.get());
+                pOutput.accept(ModBlocks.CONDENSED_EMERALD_BLOCK.get());
                 pOutput.accept(ModItems.MAGIC_WAND.get());
                 pOutput.accept(ModItems.POTATO_WATER_BUCKET.get());
             })
@@ -33,7 +35,7 @@ public class ModCreativeModeTabs {
             .icon(() -> new ItemStack(ModItems.RUBY.get()))
             .title(Component.translatable("creative_tab.thnote.thnote_machines_tab"))
             .displayItems((pParameters, pOutput) -> {
-                pOutput.accept(ModBlocks.CONDENSED_EMERALD_BLOCK.get());
+                pOutput.accept(ModBlocks.FLINT_BLOCK.get());
             })
             .build());
 
