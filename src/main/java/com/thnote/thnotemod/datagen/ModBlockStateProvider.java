@@ -18,7 +18,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RUBY_BLOCK);
         blockWithItem(ModBlocks.POTATO_RUBY_BLOCK);
         blockWithItem(ModBlocks.RUBY_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_RUBY_ORE);
         blockWithItem(ModBlocks.POTATO_RUBY_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_POTATO_RUBY_ORE);
         blockWithItem(ModBlocks.CONDENSED_EMERALD_BLOCK);
 
     }

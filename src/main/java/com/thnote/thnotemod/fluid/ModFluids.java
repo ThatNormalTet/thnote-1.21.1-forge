@@ -17,7 +17,7 @@ public class ModFluids {
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, Thnote.MOD_ID);
 
     public static final RegistryObject<FlowingFluid> SOURCE_POTATO_WATER = FLUIDS.register("source_potato_water_fluid", () -> new PotatoWaterFluid.Source(new ForgeFlowingFluid.Properties(ModFluidTypes.POTATO_WATER_TYPE, ModFluids.SOURCE_POTATO_WATER , ModFluids.FLOWING_POTATO_WATER)));
-    public static final RegistryObject<FlowingFluid> FLOWING_POTATO_WATER = FLUIDS.register("flowing_water_fluid", () -> new PotatoWaterFluid.Flowing(new ForgeFlowingFluid.Properties(ModFluidTypes.POTATO_WATER_TYPE, ModFluids.SOURCE_POTATO_WATER , ModFluids.FLOWING_POTATO_WATER)));
+    public static final RegistryObject<FlowingFluid> FLOWING_POTATO_WATER = FLUIDS.register("flowing_potato_water_fluid", () -> new PotatoWaterFluid.Flowing(new ForgeFlowingFluid.Properties(ModFluidTypes.POTATO_WATER_TYPE, ModFluids.SOURCE_POTATO_WATER , ModFluids.FLOWING_POTATO_WATER)));
 
     public static void register(IEventBus iEventBus){
         FLUIDS.register(iEventBus);

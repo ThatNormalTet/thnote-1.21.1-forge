@@ -33,7 +33,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.RUBY_ORE.get(),
                 block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RUBY.get()));
+        this.add(ModBlocks.DEEPSLATE_RUBY_ORE.get(),
+                block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RUBY.get()));
         this.add(ModBlocks.POTATO_RUBY_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.POTATO_RUBY_ORE.get(), ModItems.POTATO_RUBY.get(), 2, 5));
+        this.add(ModBlocks.DEEPSLATE_POTATO_RUBY_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.POTATO_RUBY_ORE.get(), ModItems.POTATO_RUBY.get(), 2, 5));
     }
 

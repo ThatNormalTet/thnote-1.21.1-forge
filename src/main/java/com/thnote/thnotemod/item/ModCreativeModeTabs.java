@@ -21,8 +21,11 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModItems.POTATO_RUBY.get());
                 pOutput.accept(ModBlocks.RUBY_BLOCK.get());
                 pOutput.accept(ModBlocks.RUBY_ORE.get());
+                pOutput.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());
                 pOutput.accept(ModBlocks.POTATO_RUBY_ORE.get());
+                pOutput.accept(ModBlocks.DEEPSLATE_POTATO_RUBY_ORE.get());
                 pOutput.accept(ModItems.MAGIC_WAND.get());
+                pOutput.accept(ModItems.POTATO_WATER_BUCKET.get());
             })
             .build());
 
@@ -34,7 +37,7 @@ public class ModCreativeModeTabs {
             })
             .build());
 
-    public static final void register(IEventBus iEventBus){
+    public static void register(IEventBus iEventBus){
         TABS.register(iEventBus);
     }
 }
