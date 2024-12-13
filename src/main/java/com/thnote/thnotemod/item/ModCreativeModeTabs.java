@@ -28,6 +28,7 @@ public class ModCreativeModeTabs {
                 pOutput.accept(ModBlocks.CONDENSED_EMERALD_BLOCK.get());
                 pOutput.accept(ModItems.MAGIC_WAND.get());
                 pOutput.accept(ModItems.POTATO_WATER_BUCKET.get());
+                pOutput.accept(ModItems.OXYGEN_BUCKET.get());
             })
             .build());
 
@@ -36,6 +37,7 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("creative_tab.thnote.thnote_machines_tab"))
             .displayItems((pParameters, pOutput) -> {
                 pOutput.accept(ModBlocks.FLINT_BLOCK.get());
+                pOutput.accept(ModBlocks.TEST.get());
             })
             .build());
 

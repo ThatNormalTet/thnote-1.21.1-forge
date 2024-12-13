@@ -24,6 +24,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.CONDENSED_EMERALD_BLOCK);
         blockWithItem(ModBlocks.FLINT_BLOCK);
 
+        blockWithItem(ModBlocks.TEST);
+
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

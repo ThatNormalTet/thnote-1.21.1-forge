@@ -16,11 +16,12 @@ public class ModFluidTypes {
 
     public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Thnote.MOD_ID);
 
-    public static final RegistryObject<BasicFluidType> POTATO_WATER_TYPE = register("potato_water_type", BasicFluidType.Properties.create().canSwim(false).canDrown(false).viscosity(1000).density(-1000));
+    public static final RegistryObject<BasicFluidType> POTATO_WATER_TYPE = register("potato_water_type", BasicFluidType.Properties.create().canSwim(false).canDrown(false).viscosity(1000).density(-1000), 0xA1E038D0);
+    public static final RegistryObject<BasicFluidType> OXYGEN_TYPE = register("oxygen_type", BasicFluidType.Properties.create().canSwim(false).canDrown(false).viscosity(1000).density(-1000), 0xAE339CFF);
 
-    private static RegistryObject<BasicFluidType> register(String name, FluidType.Properties properties) {
+    private static RegistryObject<BasicFluidType> register(String name, FluidType.Properties properties, int tintColor) {
         return FLUID_TYPES.register(name, () -> new BasicFluidType(WATER_STILL_RL, WATER_FLOWING_RL, UNDERWATER_OVERLAY_RL,
-                0xA1E038D0, new Vector3f(224f / 255f, 56f / 255f, 208f / 255f), properties));
+                tintColor, new Vector3f(224f / 255f, 56f / 255f, 208f / 255f), properties));
     }
 
     public static void register(IEventBus iEventBus){

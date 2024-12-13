@@ -23,6 +23,8 @@ public class ModItems{
     public static final RegistryObject<BucketItem> POTATO_WATER_BUCKET = ITEMS.register("potato_water_bucket", () -> new BucketItem(ModFluids.SOURCE_POTATO_WATER,
             new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
 
+    public static final RegistryObject<BucketItem> OXYGEN_BUCKET = ITEMS.register("oxygen_bucket", () -> new BucketItem(ModFluids.SOURCE_OXYGEN,
+            new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET)));
 
     public static void register(IEventBus iEventBus){
         ITEMS.register(iEventBus);

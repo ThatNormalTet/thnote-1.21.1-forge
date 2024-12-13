@@ -1,11 +1,9 @@
 package com.thnote.thnotemod.block.custom;
 
-import com.thnote.thnotemod.Thnote;
 import com.thnote.thnotemod.block.ModBlocks;
 import com.thnote.thnotemod.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
