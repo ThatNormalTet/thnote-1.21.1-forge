@@ -1,9 +1,10 @@
-package com.thnote.thnotemod.fluid;
+package com.thnote.thnotemod.fluid.fluids;
 
-import com.thnote.thnotemod.Thnote;
 import com.thnote.thnotemod.block.ModBlocks;
+import net.thnote.thnoteapi.fluid.GasFluid;
+import com.thnote.thnotemod.fluid.ModFluidTypes;
+import com.thnote.thnotemod.fluid.ModFluids;
 import com.thnote.thnotemod.item.ModItems;
-import it.unimi.dsi.fastutil.objects.Object2ByteLinkedOpenHashMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleOptions;
@@ -11,65 +12,46 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.*;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.WaterFluid;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.fluids.FluidType;
-import net.minecraftforge.fluids.ForgeFlowingFluid;
 
 import javax.annotation.Nullable;
-import java.lang.reflect.Modifier;
-import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
-public abstract class PotatoWaterFluid extends GasFluid {
+public abstract class OxygenGas extends GasFluid {
 
-    private static final ThreadLocal<Object2ByteLinkedOpenHashMap<Block.BlockStatePairKey>> OCCLUSION_CACHE = ThreadLocal.withInitial(() -> {
-        Object2ByteLinkedOpenHashMap<Block.BlockStatePairKey> object2bytelinkedopenhashmap = new Object2ByteLinkedOpenHashMap<Block.BlockStatePairKey>(200) {
-            @Override
-            protected void rehash(int p_76102_) {
-            }
-        };
-        object2bytelinkedopenhashmap.defaultReturnValue((byte)127);
-        return object2bytelinkedopenhashmap;
-    });
-
-    protected PotatoWaterFluid(Properties properties) {
+    protected OxygenGas(Properties properties) {
         super(properties);
     }
 
     @Override
     public Fluid getFlowing() {
-        return ModFluids.FLOWING_POTATO_WATER.get();
+        return ModFluids.FLOWING_OXYGEN.get();
     }
 
     @Override
     public Fluid getSource() {
-        return ModFluids.SOURCE_POTATO_WATER.get();
+        return ModFluids.SOURCE_OXYGEN.get();
     }
 
     @Override
     public Item getBucket() {
-        return ModItems.POTATO_WATER_BUCKET.get();
+        return ModItems.OXYGEN_BUCKET.get();
     }
 
     @Override
     public FluidType getFluidType() {
-        return ModFluidTypes.POTATO_WATER_TYPE.get();
+        return ModFluidTypes.OXYGEN_TYPE.get();
     }
 
     @Override
@@ -124,27 +106,17 @@ public abstract class PotatoWaterFluid extends GasFluid {
 
     @Override
     public BlockState createLegacyBlock(FluidState pState) {
-        return ModBlocks.POTATO_WATER_BLOCK.get().defaultBlockState().setValue(LiquidBlock.LEVEL, getLegacyLevel(pState));
+        return ModBlocks.OXYGEN_BLOCK.get().defaultBlockState().setValue(LiquidBlock.LEVEL, getLegacyLevel(pState));
     }
 
-    @Override
-    public boolean isSource(FluidState pState) {
-        return false;
-    }
-
-    @Override
+        @Override
     public boolean isSame(Fluid pFluid) {
-        return pFluid == ModFluids.SOURCE_POTATO_WATER.get() || pFluid == ModFluids.FLOWING_POTATO_WATER.get();
+        return pFluid == ModFluids.SOURCE_OXYGEN.get() || pFluid == ModFluids.FLOWING_OXYGEN.get();
     }
 
     @Override
     public int getDropOff(LevelReader pLevel) {
         return 1;
-    }
-
-    @Override
-    public int getAmount(FluidState pState) {
-        return 0;
     }
 
     @Override
@@ -167,8 +139,8 @@ public abstract class PotatoWaterFluid extends GasFluid {
         return Optional.of(SoundEvents.BUCKET_FILL);
     }
 
-    public static class Flowing extends PotatoWaterFluid {
-        protected Flowing(Properties properties) {
+    public static class Flowing extends OxygenGas {
+        public Flowing(Properties properties) {
             super(properties);
         }
 
@@ -183,14 +155,10 @@ public abstract class PotatoWaterFluid extends GasFluid {
             return pState.getValue(LEVEL);
         }
 
-        @Override
-        public boolean isSource(FluidState pState) {
-            return false;
-        }
     }
 
-    public static class Source extends PotatoWaterFluid {
-        protected Source(Properties properties) {
+    public static class Source extends OxygenGas {
+        public Source(Properties properties) {
             super(properties);
         }
 

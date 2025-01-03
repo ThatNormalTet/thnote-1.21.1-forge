@@ -1,0 +1,34 @@
+{
+  "Item": "------------------Items------------------",
+  "item.thnotemod.ruby": "Ruby",
+  "item.thnotemod.condensed_ruby": "Condensed Ruby",
+  "item.thnotemod.potato_ruby": "Potato Ruby",
+
+  "Custom Item": "------------------Custom Items------------------",
+  "item.thnotemod.magic_wand": "Magic Wand",
+
+  "Buckets": "------------------Buckets------------------",
+  "item.thnotemod.potato_water_bucket": "Potato Water Bucket",
+  "item.thnotemod.oxygen_bucket" : "Oxygen Bucket",
+
+  "Blocks": "------------------Blocks------------------",
+  "block.thnotemod.ruby_block": "Ruby Block",
+  "block.thnotemod.potato_ruby_block": "Potato Ruby Block",
+  "block.thnotemod.ruby_ore": "Ruby Ore",
+  "block.thnotemod.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "block.thnotemod.potato_ruby_ore": "Potato Ruby Ore",
+  "block.thnotemod.deepslate_potato_ruby_ore": "Deepslate Potato Ruby Ore",
+  "block.thnotemod.condensed_emerald_block": "Condensed Emerald Block",
+
+  "Custom Blocks": "------------------Custom Blocks------------------",
+  "block.thnotemod.flint_block": "Flint Block",
+  "block.thnotemod.testblock": "Test",
+
+  "Machines": "------------------Machines------------------",
+
+  "Creative Tabs": "------------------Creative Tabs------------------",
+  "creative_tab.thnote.thnote_tab": "ThNoTe",
+  "creative_tab.thnote.thnote_machines_tab": "ThNoTe Machines",
+
+  "Text": "------------------TEXTS------------------"
+}

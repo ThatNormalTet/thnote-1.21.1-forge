@@ -18,25 +18,17 @@ public class Test extends Block {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHitResult) {
-        BlockPos upPos = pPos.above();
-        List<BlockPos> pPosList = List.of(pPos.east(), pPos.west(), pPos.south(), pPos.north());
+        List<BlockPos> pPosList = List.of(pPos.east(), pPos.west(), pPos.south(), pPos.north(), pPos.above(), pPos.below());
 
-        spreadUp(upPos, pState, pLevel);
-        spreadSides(pPosList, pState, pLevel);
+        spread(pPosList, pState, pLevel);
 
         return InteractionResult.SUCCESS_NO_ITEM_USED;
     }
 
-    private void spreadUp(BlockPos pPos, BlockState pState, Level pLevel){
-        if (isAir(pLevel.getBlockState(pPos))){
-            pLevel.setBlock(pPos, pState, 3);
-        }
-    }
-
-    private void spreadSides(List<BlockPos> pPosList, BlockState pState, Level pLevel){
-        for (int i = 0; i < 4; i++) {
-            if (isAir(pLevel.getBlockState(pPosList.get(i)))){
-                pLevel.setBlock(pPosList.get(i), pState, 3);
+    private void spread(List<BlockPos> pPosList, BlockState pState, Level pLevel){
+        for (BlockPos blockPos : pPosList) {
+            if (isAir(pLevel.getBlockState(blockPos))) {
+                pLevel.setBlock(blockPos, pState, 3);
             }
         }
     }

@@ -7,6 +7,9 @@ import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import net.thnote.thnoteapi.fluid.BasicFluidType;
+
 import org.joml.Vector3f;
 
 public class ModFluidTypes {

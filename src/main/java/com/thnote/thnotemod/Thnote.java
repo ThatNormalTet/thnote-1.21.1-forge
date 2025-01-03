@@ -27,7 +27,7 @@ import org.slf4j.Logger;
 @Mod(Thnote.MOD_ID)
 public class Thnote
 {
-    public static final String MOD_ID = "thnote";
+    public static final String MOD_ID = "thnotemod";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public Thnote(FMLJavaModLoadingContext context)
